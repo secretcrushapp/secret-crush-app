@@ -1,0 +1,240 @@
+/* Add this to TOP of each component CSS file */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-color: #48bb78;
+  --error-color: #f56565;
+  --warning-color: #ed8936;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --bg-light: #f7fafc;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* CrushRequest.css - Mobile First */
+.crush-request-container {
+  min-height: 100vh;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.crush-request-box {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+  width: 100%;
+  margin: 1rem;
+}
+
+.crush-request-box h1 {
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.crush-request-box > p {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.request-limit-info {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #667eea;
+}
+
+.request-limit-info p {
+  margin: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-direction: column;
+}
+
+.back-button,
+.home-button {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: var(--text-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.back-button:hover,
+.home-button:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Limit Reached State */
+.limit-reached {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 100%;
+}
+
+.limit-reached h2 {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.limit-reached p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.limit-reached button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.limit-reached button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Loading State */
+.loading {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 100%;
+  color: var(--text-light);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .crush-request-box {
+    padding: 2.5rem;
+    margin: 2rem;
+  }
+  
+  .crush-request-box h1 {
+    font-size: 2rem;
+  }
+  
+  .action-buttons {
+    flex-direction: row;
+  }
+  
+  .back-button,
+  .home-button {
+    flex: 1;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .crush-request-box {
+    max-width: 500px;
+  }
+}

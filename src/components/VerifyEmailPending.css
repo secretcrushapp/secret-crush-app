@@ -1,0 +1,166 @@
+/* Add this to TOP of each component CSS file */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-color: #48bb78;
+  --error-color: #f56565;
+  --warning-color: #ed8936;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --bg-light: #f7fafc;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* VerifyEmailPending.css - Mobile First */
+.verify-pending-container {
+  min-height: 100vh;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.verify-pending-box {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.email-icon,
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.verify-pending-box h1 {
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.verify-pending-box > p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.email-address {
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 1.5rem 0;
+  border-left: 4px solid #667eea;
+}
+
+/* Instructions */
+.instructions {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  border-left: 4px solid var(--success-color);
+}
+
+.instructions h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.instructions ol {
+  color: var(--text-light);
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Fallback Info */
+.fallback-info {
+  background: #feebc8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  border-left: 4px solid var(--warning-color);
+}
+
+.fallback-info p {
+  color: #744210;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.back-button {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: var(--text-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .verify-pending-box {
+    padding: 2.5rem;
+  }
+  
+  .verify-pending-box h1 {
+    font-size: 2rem;
+  }
+  
+  .action-buttons {
+    flex-direction: row;
+  }
+  
+  .back-button {
+    flex: 1;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .verify-pending-box {
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,26 @@
+/* index.css - Global Styles */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-color: #48bb78;
+  --error-color: #f56565;
+  --warning-color: #ed8936;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --bg-light: #f7fafc;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+}
+
+/* Make sure this is imported in your main index.js */
