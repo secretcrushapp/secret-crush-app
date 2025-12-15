@@ -415,7 +415,7 @@ function UserDashboard() {
       {/* Footer */}
       <div className="dashboard-footer">
         <p className="footer-text">
-          💝 Need help? Contact support at: karthikk200502@gmail.com
+          💝 Need help? Contact support at: secretcrushappofficial@gmail.com
         </p>
         <p className="footer-copyright">
           © {new Date().getFullYear()} Secret Crush App. All rights reserved.
