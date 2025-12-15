@@ -163,7 +163,7 @@ function UserDashboard() {
         }, 2000);
         
         // Show success message
-        alert('✅ Link copied to clipboard!\n\n (optional) Share this link with your crush via WhatsApp, SMS, or any messaging app if you want to because we will share ourselves!');
+        alert('✅ Link copied to clipboard!\n\n');
       } else {
         throw new Error('Copy failed');
       }
@@ -304,7 +304,7 @@ function UserDashboard() {
         <ul>
           <li><strong>Step 1:</strong> Click "Create New Crush Request" above</li>
           <li><strong>Step 2:</strong> Enter your crush's details and a message</li>
-          <li><strong>Step 3:</strong> Copy the secret link and share it with them</li>
+          <li><strong>Step 3:</strong> (optional) Copy the secret link and share it with them if you want to because we will share this ourselves!</li>
           <li><strong>Step 4:</strong> They click the link and enter who THEY like</li>
           <li><strong>Step 5:</strong> If they enter YOUR name... IT'S A MATCH! 🎉</li>
         </ul>
@@ -399,7 +399,7 @@ function UserDashboard() {
                       />
                     </div>
                     <div className="url-display-helper">
-                      💡 Tip: optional:Tap on the link above to select it, then share with your crush if you want to because We will handle it!
+                      💡 Tip: optional:Tap on the link above to select it, then share with your crush if you want to because We will share it to your crush ourselves!
                     </div>
                   </div>
                 )}
