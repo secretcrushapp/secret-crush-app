@@ -163,7 +163,7 @@ function UserDashboard() {
         }, 2000);
         
         // Show success message
-        alert('✅ Link copied to clipboard!\n\nShare this link with your crush via WhatsApp, SMS, or any messaging app!');
+        alert('✅ Link copied to clipboard!\n\n (optional) Share this link with your crush via WhatsApp, SMS, or any messaging app if you want to because we will share ourselves!');
       } else {
         throw new Error('Copy failed');
       }
@@ -399,7 +399,7 @@ function UserDashboard() {
                       />
                     </div>
                     <div className="url-display-helper">
-                      💡 Tip: Tap on the link above to select it, then share with your crush!
+                      💡 Tip: optional:Tap on the link above to select it, then share with your crush if you want to because We will handle it!
                     </div>
                   </div>
                 )}
