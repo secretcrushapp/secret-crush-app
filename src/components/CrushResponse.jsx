@@ -178,7 +178,7 @@ function CrushResponse() {
               onChange={(e) => setTheirCrushName(e.target.value)}
               required
             />
-            <small>Enter the name of the person you think sent you this link</small>
+            <small>Enter who YOU like to see if it's the same person who likes you.We don't reveal your crush name to anyone,So,Enter your crush name without any fear!</small>
           </div>
 
           <button 
