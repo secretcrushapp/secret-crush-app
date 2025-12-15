@@ -5,7 +5,7 @@
 **Live App:** [secret-crush-app.vercel.app](https://secret-crush-app.vercel.app)
 
 **Donate us to continue this service free forever**
-buymeacoffee.com/secretcrushapp
+(buymeacoffee.com/secretcrushapp)
 ---
 
 ## ✨ What is Secret Crush?
