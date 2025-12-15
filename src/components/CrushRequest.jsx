@@ -130,10 +130,10 @@ function CrushRequest() {
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Your Full Name *</label>
+            <label>Your Name *</label>
             <input
               type="text"
-              placeholder="Enter your full name as your crush knows you"
+              placeholder="Enter your name as how your crush knows you"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               required
@@ -142,7 +142,7 @@ function CrushRequest() {
           </div>
 
           <div className="form-group">
-            <label>Your Crush's Full Name *</label>
+            <label>Your Crush's Name *</label>
             <input
               type="text"
               placeholder="Enter their full name"
@@ -156,12 +156,12 @@ function CrushRequest() {
             <label>Your Crush's Phone Number *</label>
             <input
               type="tel"
-              placeholder="Enter their phone number"
+              placeholder="Enter their phone number with country code"
               value={crushPhone}
               onChange={(e) => setCrushPhone(e.target.value)}
               required
             />
-            <small>We'll contact them discreetly via WhatsApp</small>
+            <small>We'll contact them discreetly via WhatsApp(We don't reveal your name!</small>
           </div>
 
           <div className="form-group">

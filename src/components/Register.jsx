@@ -153,7 +153,7 @@ function Register() {
         {/* Success Message */}
         <div className="success-note">
           <p>
-            <strong>✅ Instant Access:</strong> No email verification needed! Login immediately after registration.
+            <strong></strong> Don't misuse it! Donate us to improve this application!
           </p>
         </div>
         

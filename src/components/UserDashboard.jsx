@@ -122,21 +122,71 @@ function UserDashboard() {
     setRetryCount(prev => prev + 1);
   };
 
-  const testAuth = async () => {
+  const handleCopyLink = async (secretLink, e) => {
+    e.preventDefault();
+    const copyButton = e.currentTarget;
+    const originalText = copyButton.innerHTML;
+    
     try {
-      const token = localStorage.getItem('sessionToken');
-      console.log('Testing auth with token:', token?.substring(0, 20) + '...');
+      // Create a temporary textarea for copying
+      const textArea = document.createElement('textarea');
+      textArea.value = secretLink;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
       
-      const response = await axios.get('https://secret-crush-app-backend.onrender.com/api/auth/verify', {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
+      // Try to copy
+      let successful = false;
+      try {
+        successful = document.execCommand('copy');
+      } catch (err) {
+        // Fallback for modern browsers
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(secretLink);
+          successful = true;
+        }
+      }
       
-      console.log('✅ Auth test successful:', response.data);
-      alert(`✅ Authentication working!\nUser: ${response.data.user?.email}`);
-    } catch (error) {
-      console.error('❌ Auth test failed:', error);
-      alert('❌ Authentication failed. Please login again.');
+      document.body.removeChild(textArea);
+      
+      if (successful) {
+        // Visual feedback
+        copyButton.innerHTML = '✅ Copied!';
+        copyButton.classList.add('copied');
+        
+        setTimeout(() => {
+          copyButton.innerHTML = originalText;
+          copyButton.classList.remove('copied');
+        }, 2000);
+        
+        // Show success message
+        alert('✅ Link copied to clipboard!\n\nShare this link with your crush via WhatsApp, SMS, or any messaging app!');
+      } else {
+        throw new Error('Copy failed');
+      }
+      
+    } catch (err) {
+      console.error('Copy failed:', err);
+      
+      // Fallback: Let user select and copy manually
+      alert(
+        '📱 Mobile Copy Tip:\n\n1. Long press on the link below\n2. Select "Copy" from the menu\n3. Or tap and hold to select all text\n\nThen share it with your crush! 💕'
+      );
+      
+      // Focus the input for manual copy
+      const input = e.target.closest('.secret-link-section').querySelector('.secret-link-input');
+      if (input) {
+        input.focus();
+        input.select();
+      }
     }
+  };
+
+  const handleLinkClick = (secretLink, e) => {
+    e.currentTarget.select();
   };
 
   if (loading && retryCount === 0) {
@@ -153,8 +203,6 @@ function UserDashboard() {
 
   return (
     <div className="dashboard-container">
-      
-
       <div className="dashboard-header">
         <div className="header-left">
           <h1>Your Secret Crush Dashboard 💌</h1>
@@ -250,6 +298,21 @@ function UserDashboard() {
         </p>
       </div>
 
+      {/* Beginner Friendly Guide */}
+      <div className="beginner-tip">
+        <h4>🎯 How It Works:</h4>
+        <ul>
+          <li><strong>Step 1:</strong> Click "Create New Crush Request" above</li>
+          <li><strong>Step 2:</strong> Enter your crush's details and a message</li>
+          <li><strong>Step 3:</strong> Copy the secret link and share it with them</li>
+          <li><strong>Step 4:</strong> They click the link and enter who THEY like</li>
+          <li><strong>Step 5:</strong> If they enter YOUR name... IT'S A MATCH! 🎉</li>
+        </ul>
+        <p style={{ marginTop: '10px', fontStyle: 'italic', color: '#667eea' }}>
+          💝 Your identity remains secret unless it's a mutual match!
+        </p>
+      </div>
+
       {/* Existing Requests */}
       <div className="requests-section">
         <div className="section-header">
@@ -320,22 +383,23 @@ function UserDashboard() {
                     <div className="link-header">
                       <span className="detail-label">🔗 Secret Link:</span>
                       <button 
-                        onClick={() => {
-                          navigator.clipboard.writeText(request.secretLink);
-                          alert('Link copied to clipboard!');
-                        }}
+                        onClick={(e) => handleCopyLink(request.secretLink, e)}
                         className="copy-link-btn"
                       >
-                        📋 Copy
+                        📋 Copy Link
                       </button>
                     </div>
                     <div className="link-display">
-                      <input 
-                        type="text" 
+                      <textarea 
                         value={request.secretLink} 
                         readOnly 
                         className="secret-link-input"
+                        rows="2"
+                        onClick={handleLinkClick}
                       />
+                    </div>
+                    <div className="url-display-helper">
+                      💡 Tip: Tap on the link above to select it, then share with your crush!
                     </div>
                   </div>
                 )}
