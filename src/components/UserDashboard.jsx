@@ -304,7 +304,7 @@ function UserDashboard() {
         <ul>
           <li><strong>Step 1:</strong> Click "Create New Crush Request" above</li>
           <li><strong>Step 2:</strong> Enter your crush's details and a message</li>
-          <li><strong>Step 3:</strong> (optional) Copy the secret link and share it with them if you want to because we will share this ourselves!</li>
+          <li><strong>Step 3:</strong> (optional) Copy the secret link and share it with them ,if you want to, because we will share this to your crush ourselves! (without revealing your name)</li>
           <li><strong>Step 4:</strong> They click the link and enter who THEY like</li>
           <li><strong>Step 5:</strong> If they enter YOUR name... IT'S A MATCH! 🎉</li>
         </ul>
