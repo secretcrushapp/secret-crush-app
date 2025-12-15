@@ -2,7 +2,7 @@
 
 **Finally tell your crush how you feel - without the fear of rejection!**
 
-**Live App:** [secret-crush-app.vercel.app](https://secret-crush-app.vercel.app)
+**Live App:** [secret-crush-app-swart.vercel.app](https://secret-crush-app-swart.vercel.app)
 
 **[☕ Buy us a coffee](https://buymeacoffee.com/secretcrushapp)** - Every donation helps!---
 
