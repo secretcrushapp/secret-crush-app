@@ -65,7 +65,7 @@ function Login() {
           borderLeft: '4px solid #4caf50'
         }}>
           <p style={{ margin: 0, color: '#2e7d32' }}>
-            <strong>✅ No Email Verification Needed!</strong> You can login immediately after registration.
+            <strong></strong> Donate us to keep this application free!
           </p>
         </div>
         

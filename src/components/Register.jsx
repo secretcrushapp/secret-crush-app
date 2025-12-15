@@ -153,7 +153,7 @@ function Register() {
         {/* Success Message */}
         <div className="success-note">
           <p>
-            <strong></strong> Don't misuse it! Donate us to improve this application!
+            <strong></strong> Donate us to improve this application!
           </p>
         </div>
         
