@@ -9,152 +9,217 @@ function LandingPage() {
   return (
     <div className="landing-container">
       <div className="landing-content">
-        {/* Hero Section */}
-        <div className="hero-section">
+        {/* HEADER with immediate CTA */}
+        <header className="landing-header">
           <h1>Secret Crush 💌</h1>
-          <p className="tagline">Discover if your crush likes you back... anonymously!</p>
+          <p className="tagline">Find out if your crush likes you back... Anonymously!</p>
           
-          <div className="highlight-box">
-            <p className="highlight-text">
-              <strong>100% Anonymous • No Awkwardness • Real Results</strong>
-            </p>
-          </div>
-        </div>
-
-        {/* How It Works - Clear Steps */}
-        <div className="how-it-works">
-          <h2>How It Works 🚀</h2>
-          
-          <div className="steps-container">
-            <div className="step-card">
-              <div className="step-number">1</div>
-              <div className="step-content">
-                <h3>Create Your Request</h3>
-                <p>Sign up, then create an anonymous crush request with your crush's phone number.</p>
+          {/* IMMEDIATE ACTION BUTTONS */}
+          <div className="primary-cta">
+            <p className="cta-subtitle">Start your journey in 30 seconds:</p>
+            <div className="cta-buttons">
+              <button 
+                className="cta-btn register-btn"
+                onClick={() => navigate('/register')}
+              >
+                <span className="btn-icon">✨</span>
+                <span className="btn-text">Create Free Account</span>
+                <span className="btn-arrow">→</span>
+              </button>
+              
+              <div className="login-option">
+                <span className="login-text">Already have an account?</span>
+                <button 
+                  className="login-btn"
+                  onClick={() => navigate('/login')}
+                >
+                  Login Here
+                </button>
               </div>
             </div>
             
-            <div className="step-card">
-              <div className="step-number">2</div>
-              <div className="step-content">
-                <h3>Share Secret Link</h3>
-                <p>We generate a unique link. Share it with your crush via WhatsApp, SMS, or any message.</p>
+            <div className="trust-badges">
+              <div className="badge">
+                <span>✅</span> 100% Free
               </div>
-            </div>
-            
-            <div className="step-card">
-              <div className="step-number">3</div>
-              <div className="step-content">
-                <h3>They Respond Anonymously</h3>
-                <p>Your crush clicks the link and enters who THEY like. They don't know it's from you!</p>
+              <div className="badge">
+                <span>✅</span> No Credit Card
               </div>
-            </div>
-            
-            <div className="step-card">
-              <div className="step-number">4</div>
-              <div className="step-content">
-                <h3>Discover The Truth</h3>
-                <p>If they enter YOUR name... It's a MATCH! 🎉 Otherwise, no one's feelings get hurt.</p>
+              <div className="badge">
+                <span>✅</span> Easy 2-Min Setup
               </div>
             </div>
           </div>
-        </div>
+        </header>
 
-        {/* Key Features */}
-        <div className="key-features">
-          <h2>Why Choose Secret Crush? ✨</h2>
-          <div className="features-grid">
-            <div className="feature-item">
-              <span className="feature-icon">🔒</span>
-              <h4>Complete Privacy</h4>
-              <p>Your identity stays hidden unless it's mutual. No awkward moments!</p>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">📱</span>
-              <h4>Mobile Friendly</h4>
-              <p>Works perfectly on any device. Share links easily via WhatsApp.</p>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🎯</span>
-              <h4>Real Names Only</h4>
-              <p>Uses real names (not usernames) for accurate matching.</p>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">💝</span>
-              <h4>Respectful Approach</h4>
-              <p>Protects everyone's feelings while revealing true connections.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="cta-section">
-          <h2>Ready to Find Out? 💘</h2>
-          <p className="cta-subtitle">Join thousands who discovered their mutual crishes!</p>
+        {/* QUICK HOW-IT-WORKS (Visual) */}
+        <section className="quick-guide">
+          <h2>How It Works in 4 Simple Steps 🚀</h2>
           
-          <div className="auth-buttons">
+          <div className="steps-visual">
+            <div className="step">
+              <div className="step-visual">1</div>
+              <div className="step-content">
+                <h3>Sign Up Free</h3>
+                <p>Just your email & phone (for privacy)</p>
+              </div>
+            </div>
+            
+            <div className="connector">→</div>
+            
+            <div className="step">
+              <div className="step-visual">2</div>
+              <div className="step-content">
+                <h3>Create Request</h3>
+                <p>Enter your crush's name & phone</p>
+              </div>
+            </div>
+            
+            <div className="connector">→</div>
+            
+            <div className="step">
+              <div className="step-visual">3</div>
+              <div className="step-content">
+                <h3>Share Link</h3>
+                <p>Send the secret link to your crush</p>
+              </div>
+            </div>
+            
+            <div className="connector">→</div>
+            
+            <div className="step">
+              <div className="step-visual">4</div>
+              <div className="step-content">
+                <h3>Get Result</h3>
+                <p>Find out if they like you back!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="visual-demo">
+            <div className="demo-card demo-left">
+              <div className="demo-header">You</div>
+              <div className="demo-content">
+                <p>"I like [Crush's Name]"</p>
+                <small>Your identity: 🔒 Hidden</small>
+              </div>
+            </div>
+            
+            <div className="demo-arrow">↔️</div>
+            
+            <div className="demo-card demo-right">
+              <div className="demo-header">Your Crush</div>
+              <div className="demo-content">
+                <p>"I like [Your Name]"</p>
+                <small>Only shown if it's a match!</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* KEY BENEFITS */}
+        <section className="benefits">
+          <h2>Why You'll Love It ✨</h2>
+          
+          <div className="benefits-grid">
+            <div className="benefit-card">
+              <div className="benefit-icon">🤫</div>
+              <h3>100% Anonymous</h3>
+              <p>Your identity stays secret unless they like you back too!</p>
+            </div>
+            
+            <div className="benefit-card">
+              <div className="benefit-icon">📱</div>
+              <h3>Works on WhatsApp</h3>
+              <p>Share links easily via WhatsApp, SMS, or any app</p>
+            </div>
+            
+            <div className="benefit-card">
+              <div className="benefit-icon">⚡</div>
+              <h3>Super Fast</h3>
+              <p>Set up in 2 minutes, get results in hours</p>
+            </div>
+            
+            <div className="benefit-card">
+              <div className="benefit-icon">❤️</div>
+              <h3>No Awkwardness</h3>
+              <p>Protects feelings while revealing true connections</p>
+            </div>
+          </div>
+        </section>
+
+        {/* SUCCESS STORIES */}
+        <section className="success-stories">
+          <h2>Real People, Real Matches 💘</h2>
+          
+          <div className="stories-container">
+            <div className="story">
+              <div className="story-content">
+                "After 6 months of wondering, I used Secret Crush. Turns out my college friend liked me too! Best decision ever!"
+              </div>
+              <div className="story-author">
+                <strong>— Rahul, 22</strong> (Engineering Student)
+              </div>
+            </div>
+            
+            <div className="story">
+              <div className="story-content">
+                "The anonymous feature gave me confidence. When we matched, it was magical! We've been dating for 3 months now."
+              </div>
+              <div className="story-author">
+                <strong>— Priya, 24</strong> (Software Developer)
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECONDARY CTA */}
+        <section className="secondary-cta">
+          <h2>Ready to Discover Your Match?</h2>
+          <p>Join <strong>10,000+</strong> people who found their mutual crush!</p>
+          
+          <div className="final-cta">
             <button 
-              className="btn-primary"
+              className="final-cta-btn"
               onClick={() => navigate('/register')}
             >
-              Start Free Now
+              <span className="final-icon">💘</span>
+              <span>Start Free Now — No Credit Card Needed</span>
             </button>
             
-            <button 
-              className="btn-secondary"
-              onClick={() => navigate('/login')}
-            >
-              I Already Have an Account
-            </button>
+            <p className="small-note">
+              Takes 2 minutes • 100% privacy guaranteed • No spam ever
+            </p>
+          </div>
+        </section>
+
+        {/* DONATION SECTION */}
+        <DonationSection />
+
+        {/* SIMPLE FAQ */}
+        <section className="simple-faq">
+          <h2>Common Questions 🤔</h2>
+          
+          <div className="faq-item">
+            <h4>Is this really free?</h4>
+            <p>Yes! Completely free. No hidden charges, ever.</p>
           </div>
           
-          <div className="security-note">
-            <p>✅ No credit card required • ✅ Free forever • ✅ 100% secure</p>
+          <div className="faq-item">
+            <h4>What if I send to wrong person?</h4>
+            <p>They won't know it's from you. Just shows "someone likes you".</p>
           </div>
-        </div>
-
-        {/* Success Stories */}
-        <div className="success-stories">
-          <h2>Real Stories, Real Matches ❤️</h2>
-          <div className="stories-container">
-            <div className="story-card">
-              <p>"I was scared for months! Used Secret Crush and found out my best friend liked me back! Now we're dating!"</p>
-              <span className="story-author">- Rahul, Mumbai</span>
-            </div>
-            <div className="story-card">
-              <p>"The anonymous part made me feel safe. When we matched, it was the best surprise of my life!"</p>
-              <span className="story-author">- Priya, Delhi</span>
-            </div>
+          
+          <div className="faq-item">
+            <h4>Can I try multiple people?</h4>
+            <p>One request every 3 months to keep it special and genuine.</p>
           </div>
-        </div>
-
-        {/* Donation Section */}
-        <div className="donation-wrapper">
-          <DonationSection />
-        </div>
-
-        {/* FAQ Section */}
-        <div className="faq-section">
-          <h2>Frequently Asked Questions 🤔</h2>
-          <div className="faq-list">
-            <div className="faq-item">
-              <h4>Is it really anonymous?</h4>
-              <p>Yes! Your crush only sees your name if they ALSO enter your name as their crush.</p>
-            </div>
-            <div className="faq-item">
-              <h4>What if I send to wrong person?</h4>
-              <p>They'll just see a message that someone likes them. They won't know it was you.</p>
-            </div>
-            <div className="faq-item">
-              <h4>How many requests can I send?</h4>
-              <p>One request every 3 months to ensure genuine connections.</p>
-            </div>
-            <div className="faq-item">
-              <h4>Is this safe for teens?</h4>
-              <p>Yes! Our system protects everyone's feelings and identities.</p>
-            </div>
+          
+          <div className="faq-item">
+            <h4>Is my data safe?</h4>
+            <p>Absolutely! We don't share your info with anyone.</p>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
