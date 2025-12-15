@@ -1,165 +1,274 @@
-/* Add this to TOP of each component CSS file */
-:root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --success-color: #48bb78;
-  --error-color: #f56565;
-  --warning-color: #ed8936;
-  --text-dark: #2d3748;
-  --text-light: #718096;
-  --bg-light: #f7fafc;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.15);
-}
+/* Add these styles to your existing LandingPage.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* LandingPage.css - Mobile First */
-.landing-container {
-  min-height: 100vh;
-  background: var(--primary-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-}
-
-.landing-content {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: var(--shadow-lg);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-.landing-content h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.landing-content > p {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-/* Auth Buttons */
-.auth-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Hero Section */
+.hero-section {
   margin-bottom: 2.5rem;
 }
 
-.btn-primary,
-.btn-secondary {
-  padding: 1.2rem;
-  border: none;
+.tagline {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  padding: 1rem;
   border-radius: 12px;
+  border-left: 5px solid #667eea;
+  margin: 1.5rem 0;
+}
+
+.highlight-text {
+  color: var(--text-dark);
   font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+}
+
+/* How It Works */
+.how-it-works {
+  margin: 3rem 0;
+}
+
+.how-it-works h2 {
   text-align: center;
-}
-
-.btn-primary {
-  background: var(--primary-gradient);
-  color: white;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-}
-
-.btn-secondary {
-  background: white;
+  margin-bottom: 2rem;
   color: var(--text-dark);
-  border: 2px solid #e2e8f0;
 }
 
-.btn-secondary:hover {
-  border-color: #667eea;
-  transform: translateY(-2px);
-}
-
-/* Features Section */
-.features h2 {
-  color: var(--text-dark);
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.feature-list {
+.steps-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.feature {
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  background: var(--primary-gradient);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-light);
-  border-radius: 12px;
-  text-align: left;
-}
-
-.feature span:first-child {
-  font-size: 1.5rem;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
-.feature p {
+.step-content h3 {
   color: var(--text-dark);
-  margin: 0;
-  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-/* Tablet Styles */
+.step-content p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Key Features */
+.key-features {
+  margin: 3rem 0;
+}
+
+.key-features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  padding: 1.5rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-gradient);
+  padding: 2.5rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.cta-section .auth-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: #667eea;
+}
+
+.cta-section .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.security-note p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Success Stories */
+.success-stories {
+  margin: 3rem 0;
+}
+
+.success-stories h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.stories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.story-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid #48bb78;
+  box-shadow: var(--shadow);
+}
+
+.story-card p {
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.story-author {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin: 3rem 0;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+}
+
+.faq-item h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Donation Wrapper */
+.donation-wrapper {
+  margin: 3rem 0;
+}
+
+/* Responsive Adjustments */
 @media (min-width: 768px) {
-  .landing-content {
+  .steps-container {
+    gap: 2rem;
+  }
+  
+  .step-card {
+    padding: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-section {
     padding: 3rem;
   }
-  
-  .landing-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .auth-buttons {
-    flex-direction: row;
-  }
-  
-  .btn-primary,
-  .btn-secondary {
-    flex: 1;
-  }
-  
-  .feature-list {
-    gap: 1.5rem;
-  }
-  
-  .feature {
-    padding: 1.5rem;
-  }
 }
 
-/* Desktop Styles */
 @media (min-width: 1024px) {
-  .landing-content {
-    max-width: 600px;
+  .steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .stories-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
