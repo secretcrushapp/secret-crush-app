@@ -195,6 +195,48 @@ function CrushResponse() {
               'Check for Mutual Crush! 💕'
             )}
           </button>
+
+          {/* YouTube Video Section - Added below submit button */}
+          <div className="confusion-helper">
+            <div className="confusion-header">
+              <span className="confusion-icon">🤔</span>
+              <h4>Confused? Watch This Quick Video</h4>
+            </div>
+            <p className="confusion-subtitle">
+              Not sure how this works? This 40-second video explains everything!
+            </p>
+            
+            <div className="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/5VuX2dLaQ8E"
+                title="How Secret Crush Works - Quick Explanation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="helper-video"
+              ></iframe>
+            </div>
+            
+            <div className="video-key-points">
+              <div className="point">
+                <span>🔒</span>
+                <p>Your name stays secret unless it's mutual</p>
+              </div>
+              <div className="point">
+                <span>💝</span>
+                <p>Only enter who YOU actually like</p>
+              </div>
+              <div className="point">
+                <span>✨</span>
+                <p>Completely safe and anonymous</p>
+              </div>
+            </div>
+            
+            <p className="confusion-cta">
+              <strong>Watch → Understand → Then submit your answer!</strong>
+            </p>
+          </div>
+          {/* End of YouTube Video Section */}
         </form>
 
         <div className="security-note">
