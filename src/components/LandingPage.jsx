@@ -81,7 +81,7 @@ function LandingPage() {
               <div className="step-visual">3</div>
               <div className="step-content">
                 <h3>Share Link</h3>
-                <p>Send the secret link to your crush</p>
+                <p>We send the secret link to your crush</p>
               </div>
             </div>
             
