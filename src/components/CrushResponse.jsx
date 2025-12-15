@@ -170,15 +170,15 @@ function CrushResponse() {
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Who do YOU have a crush on? *</label>
+            <label>Enter your crush name *</label>
             <input
               type="text"
-              placeholder="Enter the name of your crush (the person who sent this link)"
+              placeholder="Enter your crush name"
               value={theirCrushName}
               onChange={(e) => setTheirCrushName(e.target.value)}
               required
             />
-            <small>Enter who YOU like to see if it's the same person who likes you.We don't reveal your crush name to anyone,So,Enter your crush name without any fear!</small>
+            <small>Note:Enter who YOU like to see if it's the same person who likes you.We don't reveal your crush name to anyone,So,Enter your crush name without any fear!</small>
           </div>
 
           <button 
