@@ -178,7 +178,7 @@ function CrushResponse() {
               onChange={(e) => setTheirCrushName(e.target.value)}
               required
             />
-            <small>Note:Enter who YOU like to see if it's the same person who likes you.We don't reveal your crush name to anyone,So,Enter your crush name without any fear!</small>
+            <small style={{ color: 'red' }} >Note:Enter who YOU like to see if it's the same person who likes you.We don't reveal your crush name to anyone,So,Enter your crush name without any fear!</small>
           </div>
 
           <button 
