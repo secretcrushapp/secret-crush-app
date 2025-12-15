@@ -110,9 +110,9 @@ We have systems to prevent spam and abuse. Each user can only send limited reque
 ## 🆘 Need Help?
 
 **Contact us anytime:**
-- **Email:** support@secretcrush.com
-- **In-app chat:** Available on your dashboard
-- **Response time:** Within 24 hours
+- **Email:** secretcrushappofficial@gmail.com
+- **In-app chat:** soon!
+- **Response time:** Within 48 hours
 
 **Having technical issues?**
 - Clear your browser cache
