@@ -117,26 +117,51 @@ function LandingPage() {
           </div>
         </section>
 
-        {/* VIDEO DEMONSTRATION */}
-        <section className="video-demo">
-          <h2>Watch How It Works in 60 Seconds 🎥</h2>
-          <div className="video-container">
-            <div className="video-wrapper">
-              <iframe
-                width="100%"
-                height="400"
-                src="https://www.youtube.com/embed/r6TgByNmop0?si=XSeIqe77FgoTrsoZ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{borderRadius: '12px', maxWidth: '800px', margin: '0 auto'}}
-              ></iframe>
-            </div>
-            <p className="video-caption">
-              See exactly how Secret Crush works - from signup to match results!
-            </p>
+        {/* VIDEO SECTION - ONLY THIS WAS ADDED */}
+        <section style={{
+          background: 'white',
+          padding: '2rem 1rem',
+          borderRadius: '20px',
+          marginBottom: '2rem',
+          boxShadow: '0 5px 20px rgba(0, 0, 0, 0.05)',
+          textAlign: 'center'
+        }}>
+          <h2 style={{color: '#2d3748', marginBottom: '1.5rem'}}>See How It Works 🎥</h2>
+          <div style={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            position: 'relative',
+            paddingBottom: '56.25%',
+            height: '0',
+            overflow: 'hidden',
+            borderRadius: '12px',
+            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'
+          }}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/r6TgByNmop0?si=XSeIqe77FgoTrsoZ"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+                border: 'none'
+              }}
+            ></iframe>
           </div>
+          <p style={{
+            color: '#718096',
+            fontSize: '0.95rem',
+            marginTop: '1rem'
+          }}>
+            Watch this 60-second video to see exactly how Secret Crush works!
+          </p>
         </section>
 
         {/* KEY BENEFITS */}
