@@ -117,6 +117,28 @@ function LandingPage() {
           </div>
         </section>
 
+        {/* VIDEO DEMONSTRATION */}
+        <section className="video-demo">
+          <h2>Watch How It Works in 60 Seconds 🎥</h2>
+          <div className="video-container">
+            <div className="video-wrapper">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/r6TgByNmop0?si=XSeIqe77FgoTrsoZ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{borderRadius: '12px', maxWidth: '800px', margin: '0 auto'}}
+              ></iframe>
+            </div>
+            <p className="video-caption">
+              See exactly how Secret Crush works - from signup to match results!
+            </p>
+          </div>
+        </section>
+
         {/* KEY BENEFITS */}
         <section className="benefits">
           <h2>Why You'll Love It ✨</h2>
